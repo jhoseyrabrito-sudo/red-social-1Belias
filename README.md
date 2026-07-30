@@ -1,2 +1,2 @@
-# red-social-1Belias
+# rede-social-1Belias
 projeto para o propotótipo rede social
