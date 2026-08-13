@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded",() => {
     if (condition!likeBtn) return;
     const likeSvg= likeBtn. querySelector("svg"); {
          
-        let textNode = Array.from(likeBtn.childNodes).find(node) =>
+        let textNode = Array.from(likeBtn.childNodes).find(node) => node.nodetyp
 
     }
 } )
