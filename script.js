@@ -21,3 +21,6 @@ if (textNode){
   textNode.textContent = '0';
 
 }
+
+//coração
+function  applyLikedStyle
