@@ -7,7 +7,17 @@ document.addEventListener("DOMContentLoaded",() => {
          
         let textNode = Array.from(likeBtn.childNodes).find(node) => node.nodetyp
         ===Node.TEXT_NODE && node.textContent.trim() !==""
-        
+
 
     }
 } )
+  
+
+//zero o contador
+let cont = 0;
+
+//actualiza
+if (textNode){
+  textNode.textContent = '0';
+
+}
