@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded",() => {
     const likeSvg= likeBtn. querySelector("svg"); {
          
         let textNode = Array.from(likeBtn.childNodes).find(node) => node.nodetyp
+        ===Node.TEXT_NODE && node.textContent.trim() !==""
+        
 
     }
 } )
