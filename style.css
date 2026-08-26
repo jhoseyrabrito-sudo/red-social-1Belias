@@ -56,12 +56,12 @@ object-fit: cover;
 .username {
 font-weight: 600;
 font-size: 14px;
-color: #1c1e21;
+color: #da642e;
 }
 
 .more-options {
 cursor: pointer;
-color: #1c1e21;
+color: #000000;
 }
 
 /* Mídia / Foto */
@@ -170,8 +170,8 @@ display: flex;
 justify-content: space-around;
 align-items: center;
 padding: 12px 0 16px 0;
-border-top: 1px solid #f0f0f0;
-background: #ffffff;
+border-top: 1px solid #504949;
+background: #574f4f;
 }
 
 .nav-item {
