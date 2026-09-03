@@ -34,6 +34,24 @@ setTimeout(() => {likeSvg.style.transorm = "scalele(1)")150);
     
 }, timeout);
 
+//paa numeros acimaa de 1000
+
+function formatlikes(num){                                                      
+    if(num >=1000){
+        return (num/1000).tofixed(1)+"k";
+    }
+return num.toString();
 
 }
 
+//incrementar a curtida
+function addlike(){
+    baseLike++;
+    isLike = true
+    likeBtn.classList.add("liked");
+
+    if(likesCountSpan){
+        likesCountSpan.textContent = formatlikes(baseLikes);
+}
+
+}
