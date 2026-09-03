@@ -30,7 +30,7 @@ likeSvg.style.color="#00BFFF"
 
 //efeito curtida
 likeSvg.style.transform ="scale(1.3)"
-setTimeout(() => {
+setTimeout(() => {likeSvg.style.transorm = "scalele(1)")150);
     
 }, timeout);
 
