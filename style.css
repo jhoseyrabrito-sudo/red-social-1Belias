@@ -152,9 +152,9 @@ body {
 
 /* Estilo do Botão Curtido */
 .action-btn.liked svg {
-  fill: #00bfff;
-  stroke: #00bfff;
-  color: #00bfff;
+  fill: #ff8a04;
+  stroke: #f08808;
+  color: #f39404;
 }
 
 /* Texto de Curtidas */
