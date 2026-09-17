@@ -1,57 +1,39 @@
-//Botão curtida
+document.addEventListener("DOMContentLoaded", () => {
+  const likeBtn = document.getElementById("like-btn");
+  const likeCountSpan = document.getElementById("like-count");
+  const likeSvg = likeBtn.querySelector("svg");
 
-document.addEventListener("DOMContentLoaded",() => {
-    const likeBtn = document.querySelector(".lef-actions .action-btn:first-child");
-    if (condition!likeBtn) return;
-    const likeSvg= likeBtn. querySelector("svg"); {
-         
-        let textNode = Array.from(likeBtn.childNodes).find(node) => node.nodetyp
-        ===Node.TEXT_NODE && node.textContent.trim() !==""
+  // Contador inicial (1200 referente a 1.2K)
+  let count = 1200;
+  let isLiked = false;
 
-
+  // Formata o número (ex: 1200 -> 1.2K)
+  function formatLikes(num) {
+    if (num >= 1000) {
+      return (num / 1000).toFixed(1) + "K";
     }
-} )
-  
+    return num.toString();
+  }
 
-//zero o contador
-let cont = 0;
+  // Evento de clique
+  likeBtn.addEventListener("click", () => {
+    isLiked = !isLiked;
 
-//actualiza
-if (textNode){
-  textNode.textContent = '0';
-
-}
-
-//coração
-function  applyLikedStyle (){
-likeSvg.style.fill="#00BFFF"
-likeSvg.style.stroke ="#00BFFF"
-likeSvg.style.color="#00BFFF"
-
-//efeito curtida
-likeSvg.style.transform ="scale(1.3)"
-setTimeout(() => {likeSvg.style.transorm = "scalele(1)")150);
-    
-}, timeout);
-
-//paa numeros acimaa de 1000
-
-function formatlikes(num){                                                      
-    if(num >=1000){
-        return (num/1000).tofixed(1)+"k";
+    if (isLiked) {
+      count++;
+      likeBtn.classList.add("liked");
+    } else {
+      count--;
+      likeBtn.classList.remove("liked");
     }
-return num.toString();
 
-}
+    // Atualiza a exibição no elemento <span>
+    likeCountSpan.textContent = formatLikes(count);
 
-//incrementar a curtida
-function addlike(){
-    baseLike++;
-    isLike = true
-    likeBtn.classList.add("liked");
-
-    if(likesCountSpan){
-        likesCountSpan.textContent = formatlikes(baseLikes);
-}
-
-}
+    // Animação de pulso no ícone
+    likeSvg.style.transform = "scale(1.3)";
+    setTimeout(() => {
+      likeSvg.style.transform = "scale(1)";
+    }, 150);
+  });
+});
